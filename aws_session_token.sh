@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Run this in a new shell.
+
 # Get MFA device ARN and token code from user input
 read -p "Enter MFA device ARN: " mfa_device_arn
 read -p "Enter MFA token code: " mfa_token_code
@@ -15,3 +17,5 @@ export AWS_SESSION_TOKEN=$(echo $aws_session_token | awk '{print $3}')
 
 # Print success message
 echo "Session token obtained and exported to environment variables."
+
+
